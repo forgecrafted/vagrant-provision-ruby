@@ -21,12 +21,14 @@ Place a call to `config.vm.provision` within the `Vagrant.configure` block insid
 ### Use all the defaults
 
 ```ruby
+# Ruby dev box by forgecrafted
 config.vm.provision "shell", inline: "curl -fsS https://raw.githubusercontent.com/forgecrafted/vagrant-provision-ruby/master/script | bash"
 ```
 
 ### Change the user, home directory, and/or ruby version
 
 ```ruby
+# Ruby dev box by forgecrafted
 config.vm.provision "shell", inline: <<-SCRIPT
   # Define user settings for rbenv installation.
   # Current default values (shown here) are normally fine.
@@ -41,6 +43,7 @@ SCRIPT
 ### Add some extra ruby installations
 
 ```ruby
+# Ruby dev box by forgecrafted
 config.vm.provision "shell", inline: <<-SCRIPT
   # Run the script first...
   curl -fsS https://raw.githubusercontent.com/forgecrafted/vagrant-provision-ruby/master/script | bash
