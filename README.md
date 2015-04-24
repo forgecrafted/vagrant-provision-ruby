@@ -6,13 +6,17 @@ So if you have a Ruby project, and it doesn't rise to the needs of throwing Chef
 
 ## Minimum Requirements
 
-Written for Ubuntu 14.04 boxes. We currently use this one:
+##### Written for Ubuntu 14.04 boxes.
+
+We currently use this one:
 
 ```
 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
 ```
 
-Installation location must be able to make remote URL requests. Vagrant provides `curl` by default, so you just need to make sure your network allows the connection.
+##### Installation location must be able to make remote URL requests.
+
+Vagrant provides `curl` by default, so you just need to make sure your network allows the external connection to GitHub. If that's not possible, grab the code and maintain it in your repo.
 
 ## Installation
 
@@ -70,4 +74,4 @@ If you like our code, please give us a hollar if your company needs outside pro'
 
 ## License
 
-Finishing Moves is Copyright Forge Software, LLC. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+Copyright (c) Forge Software, LLC. It is free software, and may be redistributed under the terms specified in the LICENSE file.
