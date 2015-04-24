@@ -71,6 +71,6 @@ as_user "/home/$USER_NAME/.rbenv/bin/rbenv global $DEFAULT_RUBY"
 
 ###############################################################################
 # EDIT HERE!
-# Install any Rubies (other than $DEFAULT_RUBY) required for individual apps.
+# Install any Rubies (other than $DEFAULT_RUBY) required for testing, etc.
 ###############################################################################
 # e.g. `install_ruby 1.9.3`
