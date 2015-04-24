@@ -6,9 +6,13 @@ So if you have a Ruby project, and it doesn't rise to the needs of throwing Chef
 
 ## Minimum Requirements
 
-Written for Ubuntu 14.04 boxes.
+Written for Ubuntu 14.04 boxes. We currently use this one:
 
-We currently use `https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box`
+```
+https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+```
+
+Installation location must be able to make remote URL requests. Vagrant provides `curl` by default, so you just need to make sure your network allows the connection.
 
 ## Installation
 
@@ -41,7 +45,8 @@ config.vm.provision "shell", inline: <<-SCRIPT
   # Run the script first...
   curl -fsS https://raw.githubusercontent.com/forgecrafted/vagrant-provision-ruby/master/script | bash
 
-  # Then install any Rubies (other than $DEFAULT_RUBY) required for testing, etc.
+  # Then install Ruby versions (other than $DEFAULT_RUBY) required for testing, etc.
+  # The `install_ruby` syntax is REQUIRED and provided by the script
   install_ruby 1.9.3
 SCRIPT
 ```
@@ -56,7 +61,7 @@ SCRIPT
 
 [![forge software](http://www.forgecrafted.com/logo.png)](http://www.forgecrafted.com)
 
-Finishing Moves is maintained and funded by [Forge Software (forgecrafted.com)](http://www.forgecrafted.com)
+This project is maintained and funded by [Forge Software (forgecrafted.com)](http://www.forgecrafted.com)
 
 If you like our code, please give us a hollar if your company needs outside pro's who can write good code AND run servers at the same time!
 
