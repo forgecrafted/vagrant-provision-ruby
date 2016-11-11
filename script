@@ -5,7 +5,7 @@
 ###############################################################################
 USER_NAME=${USER_NAME-vagrant}
 USER_HOME=${USER_HOME-/home/$USER_NAME}
-DEFAULT_RUBY=${DEFAULT_RUBY-'2.2.1'}
+DEFAULT_RUBY=${DEFAULT_RUBY-'2.3.1'}
 
 ###############################################################################
 # Functions
