@@ -42,7 +42,7 @@ config.vm.provision "shell", inline: <<-SCRIPT
   # Current default values (shown here) are normally fine.
   export USER_NAME=vagrant
   export USER_HOME=/home/$USER_NAME
-  export DEFAULT_RUBY='2.2.1'
+  export DEFAULT_RUBY='2.3.1'
 
   curl -fsS https://raw.githubusercontent.com/forgecrafted/vagrant-provision-ruby/master/script | bash
 SCRIPT
@@ -62,6 +62,9 @@ config.vm.provision "shell", inline: <<-SCRIPT
   install_ruby 1.9.3
 SCRIPT
 ```
+
+## Sample Vagrantfile
+If the above instructions aren't making sense, or if you are new to Vagrant, [we've included a sample Vagrantfile](https://github.com/forgecrafted/vagrant-provision-ruby/blob/master/Vagrantfile-sample). It includes a call to the provisioner script, so you'll see where/how to add it to your own Vagrantfile.
 
 ## Bug Reports
 
