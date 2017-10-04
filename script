@@ -35,21 +35,26 @@ apt-get -yfV dist-upgrade
 ###############################################################################
 
 # Install dependencies.
-apt-get install -yfV         \
-  build-essential            \
-  curl                       \
-  git-core                   \
-  libcurl4-openssl-dev       \
-  libreadline-dev            \
-  libsqlite3-dev             \
-  libssl-dev                 \
-  libxml2-dev                \
-  libxslt1-dev               \
-  libyaml-dev                \
-  python-software-properties \
-  sqlite3                    \
-  zlib1g-dev                 \
-  libffi-dev                 \
+apt-get install -yfV            \
+  apt-transport-https           \
+  build-essential               \
+  ca-certificates               \
+  curl                          \
+  git-core                      \
+  libcurl4-openssl-dev          \
+  libreadline-dev               \
+  libsqlite3-dev                \
+  libssl-dev                    \
+  libxml2-dev                   \
+  libxslt1-dev                  \
+  libyaml-dev                   \
+  linux-image-extra-$(uname -r) \
+  linux-image-extra-virtual     \
+  python-software-properties    \
+  software-properties-common    \
+  sqlite3                       \
+  zlib1g-dev                    \
+  libffi-dev                    \
 
 # Remove any leftovers
 apt-get -y autoremove
@@ -68,6 +73,15 @@ echo 'gem: --no-document'                   >> $USER_HOME/.gemrc
 # Install Ruby for $USER_NAME.
 install_ruby $DEFAULT_RUBY
 as_user "/home/$USER_NAME/.rbenv/bin/rbenv global $DEFAULT_RUBY"
+
+# Install Docker (very common use case)
+# https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-using-the-repository
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+apt-get update && apt-get install docker-ce
 
 ###############################################################################
 # EDIT HERE!
