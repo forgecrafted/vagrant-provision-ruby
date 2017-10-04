@@ -1,7 +1,5 @@
 # vagrant-provision-ruby
 
-[![Hire Us!](https://img.shields.io/badge/pros-for%20hire-F7931E.svg)](http://www.forgecrafted.com)
-
 We use a really simple vagrant provisioning script for all our minimally-complex ruby projects. Instead of keeping a copy of this Vagrant provisioner in each project, we store it in teh interwebs and make a curl call when needed.
 
 So if you have a Ruby project, and it doesn't rise to the needs of throwing Chef/Puppet/Salt/Ansible at it, this script might be sufficient. Reusing this script minimizes the amount of meta crap you have to track across your projects.
